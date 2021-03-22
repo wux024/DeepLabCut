@@ -195,7 +195,7 @@ def train(
             variables_to_restore = slim.get_variables_to_restore(
                 include=["MobilenetV2"]
             )
-        elif 'efficientnet' in net_type:
+        elif "efficientnet" in net_type:
             variables_to_restore = slim.get_variables_to_restore(include=["efficientnet"])
             variables_to_restore = {
                     var.op.name.replace("efficientnet/", "")
